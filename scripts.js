@@ -30,7 +30,7 @@ function getUserLocation() {
         const lat = position.coords.latitude;
         const lon = position.coords.longitude;
 
-        fetch(`http://api.openweathermap.org/geo/1.0/reverse?lat=${lat}&lon=${lon}&limit=1&appid=${apiKey}`)
+        fetch(`https://api.openweathermap.org/geo/1.0/reverse?lat=${lat}&lon=${lon}&limit=1&appid=${apiKey}`)
           .then((response) => response.json())
           .then((data) => {
             if (data && data.length > 0) {
@@ -92,7 +92,7 @@ function localStorageForRecent() {
 
 //API FUNCTIONS
 function geocodeCity(city) {
-  let geocodeCityURL = `http://api.openweathermap.org/geo/1.0/direct?q=${city}&limit=1&appid=${apiKey}`;
+  let geocodeCityURL = `https://api.openweathermap.org/geo/1.0/direct?q=${city}&limit=1&appid=${apiKey}`;
 
   return fetch(geocodeCityURL)
     .then((response) => response.json())
