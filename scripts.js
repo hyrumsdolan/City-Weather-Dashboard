@@ -71,7 +71,6 @@ function updatePage() {
 
 function localStorageForRecent() {
   for (let i = localStorage.length - 1; i >= 0; i--) {
-    console.log(localStorage.key(i));
     if (localStorage.key(i).includes("recentSearch:")) {
       let key = localStorage.key(i);
       let value = localStorage.getItem(key);
